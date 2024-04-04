@@ -1238,14 +1238,14 @@ class _SearchChoicesState<T> extends FormFieldState<T> {
             prepareWidget(widget.disabledHint,
                     parameter: updateParentWithOptionalPop) !=
                 null)) {
-      final Widget? positionedHint = DropdownMenuItem<T>(
-        child: (_enabled
+      final Widget? positionedHint = /*DropdownMenuItem<T>(
+        child: */(_enabled
                 ? prepareWidget(widget.hint)
                 : prepareWidget(widget.disabledHint,
                         parameter: updateParentWithOptionalPop) ??
                     prepareWidget(widget.hint)) ??
-            SizedBox.shrink(),
-      );
+            SizedBox.shrink();/*,
+      );*/
       hintIndex = items.length;
       items.add(DefaultTextStyle(
         style: _textStyle.copyWith(color: Theme.of(context).hintColor),
